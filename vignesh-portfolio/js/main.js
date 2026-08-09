@@ -473,22 +473,46 @@ p.y=Math.max(0,Math.min(h,p.y));
     touchGlow.className = 'touch-glow';
     document.body.appendChild(touchGlow);
 
+    let touchTargetX = 0;
+    let touchTargetY = 0;
+    let touchGlowX = 0;
+    let touchGlowY = 0;
+
     window.addEventListener('touchstart', (e)=>{
         const touch = e.touches[0];
-        touchGlow.style.left = `${touch.clientX}px`;
-        touchGlow.style.top = `${touch.clientY}px`;
+
+        touchTargetX = touch.clientX;
+        touchTargetY = touch.clientY;
+        touchGlowX = touch.clientX;
+        touchGlowY = touch.clientY;
+
+        touchGlow.style.left = `${touchGlowX}px`;
+        touchGlow.style.top = `${touchGlowY}px`;
         touchGlow.classList.add('active');
     }, {passive:true});
 
     window.addEventListener('touchmove', (e)=>{
         const touch = e.touches[0];
-        touchGlow.style.left = `${touch.clientX}px`;
-        touchGlow.style.top = `${touch.clientY}px`;
+
+        touchTargetX = touch.clientX;
+        touchTargetY = touch.clientY;
     }, {passive:true});
 
     window.addEventListener('touchend', ()=>{
         touchGlow.classList.remove('active');
     }, {passive:true});
+
+    function smoothTouchGlow(){
+        touchGlowX += (touchTargetX - touchGlowX) * 0.55;
+        touchGlowY += (touchTargetY - touchGlowY) * 0.55;
+
+        touchGlow.style.left = `${touchGlowX}px`;
+        touchGlow.style.top = `${touchGlowY}px`;
+
+        requestAnimationFrame(smoothTouchGlow);
+    }
+
+    smoothTouchGlow();
 })();
 
 /* ============ SITE-WIDE MOUSE-FOLLOW GLOW + MAGNETIC HOVER ============ */
