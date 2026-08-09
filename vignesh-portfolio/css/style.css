@@ -480,7 +480,7 @@
     .atom-animation {
         width: 340px;
         height: 340px;
-        right:  0px;
+        right:  60px;
         top: 55px;
         opacity: 0.75;
     }
@@ -538,29 +538,5 @@
 
     .stat .label {
         font-size: 9px;
-    }
-}
-@media (max-width: 1200px) {
-    .atom-animation {
-        width: 380px !important;
-        height: 380px !important;
-        right: -70px !important;
-        top: 45px !important;
-    }
-
-    .atom-orbit {
-        width: 310px !important;
-        height: 120px !important;
-    }
-
-    .atom-core {
-        width: 65px !important;
-        height: 65px !important;
-    }
-
-    .hero {
-        min-height: auto !important;
-        padding-top: 90px !important;
-        padding-bottom: 50px !important;
     }
 }
