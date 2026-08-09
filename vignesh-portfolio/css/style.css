@@ -278,23 +278,30 @@
 
 /* mobile */
 @media (max-width: 900px) {
-  .atom-animation {
-    width: 300px;
-    height: 300px;
-    right: -80px;
-    top: 90px;
-    opacity: 0.45;
-  }
+   /* MOBILE HOMEPAGE FIX */
+    .hero{
+        min-height:auto;
+        padding-top:90px;
+        padding-bottom:50px;
+        justify-content:flex-start;
+    }
 
-  .atom-orbit {
-    width: 250px;
-    height: 100px;
-  }
+    .atom-animation{
+        width:380px;
+        height:380px;
+        right:-70px;
+        top:45px;
+    }
 
-  .atom-core {
-    width: 55px;
-    height: 55px;
-  }
+    .atom-orbit{
+        width:310px;
+        height:120px;
+    }
+
+    .atom-core{
+        width:65px;
+        height:65px;
+    }
 } 
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,217,192,.5);} 70%{box-shadow:0 0 0 10px rgba(0,217,192,0);} 100%{box-shadow:0 0 0 0 rgba(0,217,192,0);}}
   .hero h1{
