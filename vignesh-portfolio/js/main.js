@@ -151,7 +151,6 @@ function pageSkills(){
         </div>
       `).join('')}
     </div>
-    <div class="skills-note">Note — the Web Development section is a placeholder based on current tooling (Git/GitHub); edit this once you've added specific frontend/backend skills.</div>
   </div>
   `;
 }
