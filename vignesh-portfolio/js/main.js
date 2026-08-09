@@ -406,21 +406,21 @@ if(orb){
     mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true;
   });
   window.addEventListener('mouseleave', ()=>{ mouse.active = false; });
-  canvas.addEventListener('touchstart', e => {
+  window.addEventListener('touchstart', e => {
     const touch = e.touches[0];
     mouse.x = touch.clientX;
     mouse.y = touch.clientY;
     mouse.active = true;
 }, { passive: true });
 
-canvas.addEventListener('touchmove', e => {
+window.addEventListener('touchmove', e => {
     const touch = e.touches[0];
     mouse.x = touch.clientX;
     mouse.y = touch.clientY;
     mouse.active = true;
 }, { passive: true });
 
-canvas.addEventListener('touchend', () => {
+window.addEventListener('touchend', () => {
     mouse.active = false;
 });
 
