@@ -460,3 +460,76 @@
   .contact-title {
   font-size: clamp(42px, 6.5vw, 80px);
 }
+/* ===== MOBILE HOMEPAGE ARRANGEMENT ===== */
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 100vh;
+        padding: 100px 20px 50px;
+        justify-content: flex-start;
+    }
+
+    /* Atom positioning */
+    .atom-animation {
+        width: 340px;
+        height: 340px;
+        right: -55px;
+        top: 55px;
+        opacity: 0.75;
+    }
+
+    .atom-orbit {
+        width: 280px;
+        height: 110px;
+    }
+
+    .atom-core {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* Keep text below the atom */
+    .hero-tag {
+        margin-top: 250px;
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: clamp(30px, 8.5vw, 42px);
+        line-height: 1.08;
+        max-width: 100%;
+    }
+
+    .hero p.lead {
+        font-size: 13px;
+        line-height: 1.55;
+        margin-top: 18px;
+        max-width: 100%;
+    }
+
+    .hero-cta {
+        margin-top: 28px;
+        gap: 10px;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+        font-size: 10px;
+        padding: 12px 18px;
+    }
+
+    .stats-row {
+        margin-top: 45px;
+        padding: 0 20px;
+        gap: 24px;
+    }
+
+    .stat .num {
+        font-size: 27px;
+    }
+
+    .stat .label {
+        font-size: 9px;
+    }
+}
