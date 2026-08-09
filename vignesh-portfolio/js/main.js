@@ -467,6 +467,29 @@ p.y=Math.max(0,Math.min(h,p.y));
   }
   tick();
 })();
+/* ============ MOBILE TOUCH GLOW ============ */
+(function(){
+    const touchGlow = document.createElement('div');
+    touchGlow.className = 'touch-glow';
+    document.body.appendChild(touchGlow);
+
+    window.addEventListener('touchstart', (e)=>{
+        const touch = e.touches[0];
+        touchGlow.style.left = `${touch.clientX}px`;
+        touchGlow.style.top = `${touch.clientY}px`;
+        touchGlow.classList.add('active');
+    }, {passive:true});
+
+    window.addEventListener('touchmove', (e)=>{
+        const touch = e.touches[0];
+        touchGlow.style.left = `${touch.clientX}px`;
+        touchGlow.style.top = `${touch.clientY}px`;
+    }, {passive:true});
+
+    window.addEventListener('touchend', ()=>{
+        touchGlow.classList.remove('active');
+    }, {passive:true});
+})();
 
 /* ============ SITE-WIDE MOUSE-FOLLOW GLOW + MAGNETIC HOVER ============ */
 (function(){
