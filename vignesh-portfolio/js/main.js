@@ -11,6 +11,7 @@ const NAV = [
 const PROFILE = {
   name:'Vignesh S',
   email:'vigneshsivakumar1708@gmail.com',
+  phone:'7200 321 708',
   linkedin:'https://www.linkedin.com/in/vignesh-sivakumar-171aa3394',
   github:'https://github.com/vigneshsivakumar17',
   instagram:'https://instagram.com/vikky._.sivakumar',
