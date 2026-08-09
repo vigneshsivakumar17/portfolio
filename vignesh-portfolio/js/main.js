@@ -554,8 +554,8 @@ p.y=Math.max(0,Math.min(h,p.y));
 
   // Smoothly trail the glow behind the raw cursor position (eased follow).
   function followLoop(){
-    glowPos.x += (mouse.x - glowPos.x) * 0.55;
-    glowPos.y += (mouse.y - glowPos.y) * 0.55;
+    glowPos.x += (mouse.x - glowPos.x) * 0.70;
+    glowPos.y += (mouse.y - glowPos.y) * 0.70;
     glow.style.transform = `translate(${glowPos.x}px, ${glowPos.y}px) translate(-50%,-50%)`;
     requestAnimationFrame(followLoop);
   }
